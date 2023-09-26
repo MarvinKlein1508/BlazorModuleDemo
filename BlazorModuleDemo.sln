@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorModuleDemo", "BlazorModuleDemo\BlazorModuleDemo.csproj", "{D836EF33-8EF8-4159-98FA-3D25C7C024DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{85A27B47-1BDA-421C-83A4-9413DAE75A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowAlertModule", "ShowAlertModule\ShowAlertModule.csproj", "{FC812C38-69B0-485E-96B5-BE6915311012}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D836EF33-8EF8-4159-98FA-3D25C7C024DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D836EF33-8EF8-4159-98FA-3D25C7C024DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D836EF33-8EF8-4159-98FA-3D25C7C024DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D836EF33-8EF8-4159-98FA-3D25C7C024DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC812C38-69B0-485E-96B5-BE6915311012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC812C38-69B0-485E-96B5-BE6915311012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC812C38-69B0-485E-96B5-BE6915311012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC812C38-69B0-485E-96B5-BE6915311012}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC812C38-69B0-485E-96B5-BE6915311012} = {85A27B47-1BDA-421C-83A4-9413DAE75A9C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B2D313C-FE76-4769-8C7E-BB6917E848DD}
+	EndGlobalSection
+EndGlobal

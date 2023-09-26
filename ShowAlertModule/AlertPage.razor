@@ -1,0 +1,37 @@
+@page "/Alert"
+@using Microsoft.JSInterop;
+@inject IJSRuntime jsRuntime
+
+<button class="btn btn-primary">Show Alert</button>
+
+@code {
+    private IJSObjectReference? module;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./AlertPage.razor.js");
+            // Tried
+            //module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./ShowAlertModule/AlertPage.razor.js");
+            //module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/ShowAlertModule/AlertPage.razor.js");
+            //module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "~/ShowAlertModule/AlertPage.razor.js");
+            //module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "~/AlertPage.razor.js");
+            //module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "../AlertPage.razor.js");
+        }
+    }
+
+    private async Task ShowAlertAsync()
+    {
+        if (module is not null)
+        {
+            await module.InvokeVoidAsync("showAlert", "Hello World");
+        }
+    }
+    public async ValueTask DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}
